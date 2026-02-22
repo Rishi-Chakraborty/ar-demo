@@ -21,18 +21,18 @@
         </div>
         
         <div id="kpi-panel" class="hidden">
-            <h3 id="component-name">Server Rack Alpha</h3>
+            <h3 id="component-name">Cyber Samurai Alpha</h3>
             <div class="kpi-grid">
                 <div class="kpi-card">
-                    <span class="label">Uptime</span>
+                    <span class="label">Armor</span>
                     <span class="value" id="val-uptime">99.9%</span>
                 </div>
                 <div class="kpi-card">
-                    <span class="label">Temp</span>
+                    <span class="label">Core Temp</span>
                     <span class="value warning" id="val-temp">42°C</span>
                 </div>
                 <div class="kpi-card">
-                    <span class="label">Efficiency</span>
+                    <span class="label">Power</span>
                     <span class="value positive" id="val-eff">+14%</span>
                 </div>
             </div>
@@ -46,15 +46,17 @@
             <a-asset-item id="my-custom-model" src="cyber_samurai.glb"></a-asset-item>
         </a-assets>
 
+        <a-light type="ambient" color="#ffffff" intensity="1.5"></a-light>
+        <a-light type="directional" color="#ffffff" intensity="2.0" position="1 1 1"></a-light>
+
         <a-entity camera>
             <a-entity cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable"></a-entity>
         </a-entity>
 
         <a-marker preset="hiro">
-            <a-entity gltf-model="#my-custom-model" class="clickable" interactive-machine position="0 0 0" scale="1 1 1"></a-entity>
+            <a-entity gltf-model="#my-custom-model" class="clickable" interactive-machine position="0 0 0" scale="2 2 2"></a-entity>
         </a-marker>
         
     </a-scene>
 </body>
 </html>
-
