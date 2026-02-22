@@ -42,26 +42,18 @@
 
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix;" vr-mode-ui="enabled: false">
         
-        <a-entity camera>
+        <a-assets>
             <a-asset-item id="my-custom-model" src="cyber_samurai.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity camera>
+            <a-entity cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable"></a-entity>
         </a-entity>
 
         <a-marker preset="hiro">
-            
-                <a-entity gltf-model="#my-custom-model" class="clickable" interactive-machine position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
-
-                <a-box position="0 0.5 0" color="#333333" depth="1" height="1" width="0.8"></a-box>
-                
-                <a-box position="-0.2 0.8 0.51" color="#00ff00" depth="0.05" height="0.1" width="0.1"
-                       animation="property: material.opacity; to: 0.2; loop: true; dir: alternate; dur: 500"></a-box>
-                <a-box position="0.2 0.8 0.51" color="#00ff00" depth="0.05" height="0.1" width="0.1"
-                       animation="property: material.opacity; to: 0.2; loop: true; dir: alternate; dur: 800"></a-box>
-                       
-                <a-cylinder position="0 0.3 0.51" color="#111" radius="0.2" height="0.05" rotation="90 0 0"
-                            animation="property: rotation; to: 90 360 0; loop: true; dur: 1000; easing: linear"></a-cylinder>
-            </a-entity>
-
-            </a-marker>
+            <a-entity gltf-model="#my-custom-model" class="clickable" interactive-machine position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+        </a-marker>
+        
     </a-scene>
 </body>
 </html>
